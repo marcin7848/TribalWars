@@ -1,0 +1,62 @@
+{
+	"manifest_version": 3,
+	"name": "TribalWars",
+	"description": "Manage TribalWars",
+	"version": "1.0",
+	"icons": {
+		"16": "img/16.png",
+		"32": "img/32.png",
+		"128": "img/128.png"
+	},
+
+	"action": {
+		"default_icon": {                          
+			"32": "img/32.png"
+		},
+		"default_title": "TribalWars! Click to toggle bot"     
+	},
+
+	"options_page": "src/views/options.html",
+
+	"background": {
+		"service_worker": "src/background.js"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["*://*.plemiona.pl/*", "*://plemiona.pl/*"],
+			"exclude_globs": ["*://forum.plemiona.pl/*"],
+			"css": [
+				"src/styles/style.css"
+			],
+			"js": [
+				"src/jquery-3.6.0.min.js",
+				"src/model/account.js",
+				"src/model/world.js",
+				"src/globalFunctions.js",
+				"src/botMenu.js",
+				"src/accountManagement.js",
+				"src/worldManagement.js",
+				"src/menuSettings.js"
+			],
+			"run_at": "document_idle"
+		}
+	],
+
+	"permissions": [
+		"unlimitedStorage",
+		"tabs",
+		"activeTab",
+		"browsingData",
+		"notifications",
+		"webNavigation",
+		"storage",
+		"background",
+		"clipboardWrite",
+		"clipboardRead"
+	],
+
+	"host_permissions": [
+		"*://*/*"
+	]
+}

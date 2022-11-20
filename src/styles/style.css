@@ -1,0 +1,96 @@
+.tribalWars_menuBox {
+    all: initial !important;
+}
+
+.tribalWars_menuBox_outside {
+    z-index: 2147483641;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    cursor: pointer;
+    pointer-events: initial!important;
+}
+
+.tribalWars_menuBox_relative {
+    z-index: 21;
+    position: relative;
+}
+
+.tribalWars_menuBox_main {
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    pointer-events: all;
+    overflow: auto;
+    background: rgba(204, 204, 192, 1.0);
+    position: absolute;
+    right: 5px;
+    top: 10vh;
+}
+
+.tribalWars_menuBox_closed {
+    width: 100%;
+    height: 100%;
+}
+
+.tribalWars_menuBox_title{
+    width: 100%;
+    height: 25px;
+    font-size: 20px;
+}
+
+.tribalWars_menuBox_worldChooseBox{
+    width: 100%;
+    height: 30px;
+}
+
+.selectWorld{
+    display:inline-block;
+    margin: 4px 15px 0 15px;
+    padding: 3px;
+}
+
+.addNewWorld{
+    background: rgba(255, 255, 255, 1.0);
+    display:inline-block;
+    font-size: 17px;
+    padding: 3px;
+    border: 1px solid black;
+    width: 26px;
+    height: 26px;
+    margin-left: 5px;
+}
+
+.tribalWars_menuBox_buttons{
+    width: 100%;
+    height: 32px;
+}
+
+.tribalWars_menuBox_messages{
+    width: 100%;
+    height: 38px;
+}
+
+.tribalWars_menuBox_body{
+    width: 100%;
+    height: calc(100% - 128px);
+    overflow: auto;
+    border: 1px solid black;
+}
+
+.tribalWars_menuBox_button{
+    background: rgba(255, 255, 255, 1.0);
+    display:inline-block;
+    font-size: 17px;
+    margin: 4px 15px 0 15px;
+    padding: 3px;
+    border: 1px solid black;
+}
+
+.tribalWars_menuBox_message{
+    font-size: 16px;
+    margin-top: 2px;
+}
